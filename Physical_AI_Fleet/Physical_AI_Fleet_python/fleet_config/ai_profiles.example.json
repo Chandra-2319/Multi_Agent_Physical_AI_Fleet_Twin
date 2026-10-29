@@ -1,0 +1,32 @@
+{
+ "_comment": "Copy to ~/.physical_ai_fleet/ai_profiles.json (or press SAVE in the AI Models panel) and type your keys. Kept outside the extension folder: it holds API keys.",
+ "active": "nvidia",
+ "profiles": {
+  "nvidia": {
+   "brain": {
+    "url": "https://integrate.api.nvidia.com/v1",
+    "model": "nvidia/nemotron-3-super-120b-a12b",
+    "api_key": "nvapi-..."
+   },
+   "vlm": {
+    "url": "https://integrate.api.nvidia.com/v1",
+    "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+    "api_key": "nvapi-...",
+    "thinking": false
+   }
+  },
+  "nebius": {
+   "brain": {
+    "url": "https://api.tokenfactory.nebius.com/v1",
+    "model": "<model id>",
+    "api_key": "<nebius key>"
+   },
+   "vlm": {
+    "url": "https://api.tokenfactory.nebius.com/v1",
+    "model": "<vision model id>",
+    "api_key": "<nebius key>",
+    "thinking": false
+   }
+  }
+ }
+}

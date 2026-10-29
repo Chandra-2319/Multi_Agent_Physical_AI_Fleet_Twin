@@ -1,0 +1,47 @@
+{
+ "schema_version": "1.0",
+ "assets": [
+  {
+   "id": "motor-01",
+   "type": "electric_motor",
+   "position": [
+    12.0,
+    -12.0,
+    0.0
+   ],
+   "orientation_deg": [
+    0.0,
+    0.0,
+    45.0
+   ]
+  },
+  {
+   "id": "motor-02",
+   "type": "electric_motor",
+   "position": [
+    10.0,
+    10.0,
+    0.0
+   ],
+   "orientation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "id": "motor-03",
+   "type": "electric_motor",
+   "position": [
+    -10.0,
+    14.0,
+    0.0
+   ],
+   "orientation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ]
+}

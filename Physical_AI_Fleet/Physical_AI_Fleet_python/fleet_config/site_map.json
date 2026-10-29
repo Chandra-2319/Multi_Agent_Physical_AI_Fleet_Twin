@@ -1,0 +1,11 @@
+{
+  "_comment": "Walkable area = geofence polygon [[x, y], ...] in world metres, corners in order around the edge. Robots plan only inside it and never enter a no-go zone. Copy to ~/.physical_ai_fleet/site_map.json (or set FLEET_SITE_MAP) to keep your own version; press LOAD SITE MAP in the Assets panel after editing.",
+  "schema_version": "1.0",
+  "walkable_area": {
+    "polygon": [[-15, -15], [15, -15], [15, 15], [-15, 15]]
+  },
+  "no_go_zones": [
+    {"id": "flare-exclusion", "label": "Flare radiation zone (example)", "polygon": [[-14, 10], [-9, 10], [-9, 14], [-14, 14]]}
+  ],
+  "display": {"show": true}
+}

@@ -1,0 +1,95 @@
+{
+ "schema_version": "1.0",
+ "assets": [
+  {
+   "id": "motor-01",
+   "type": "electric_motor",
+   "position": [
+    20.25,
+    5.0,
+    0.0
+   ],
+   "orientation_deg": [
+    0.0,
+    0.0,
+    -90.0
+   ]
+  },
+  {
+   "id": "motor-02",
+   "type": "electric_motor",
+   "position": [
+    13.0,
+    5.0,
+    0.0
+   ],
+   "orientation_deg": [
+    0.0,
+    0.0,
+    180.0
+   ]
+  },
+  {
+   "id": "motor-03",
+   "type": "electric_motor",
+   "position": [
+    -9.0,
+    5.0,
+    0.0
+   ],
+   "orientation_deg": [
+    0.0,
+    0.0,
+    -90.0
+   ]
+  }
+  
+ ],
+ "robots": [
+  {
+   "id": "spot-1",
+   "model": "spot",
+   "mode": "simulation",
+   "position": [
+    -15.0,
+    12.0
+   ],
+   "yaw_deg": 0.0,
+   "walking": true
+  },
+  {
+   "id": "spot-2",
+   "model": "spot",
+   "mode": "simulation",
+   "position": [
+    22.0,
+    12.0
+   ],
+   "yaw_deg": 180.0,
+   "walking": true
+  },
+  {
+   "id": "spot-3",
+   "model": "spot",
+   "mode": "simulation",
+   "position": [
+    22.0,
+    15.0
+   ],
+   "yaw_deg": 180.0,
+   "walking": true
+  },
+  {
+   "id": "amr-1",
+   "model": "amr",
+   "mode": "simulation",
+   "position": [
+    22.0,
+    10.0
+   ],
+   "yaw_deg": 180.0,
+   "walking": true
+  }
+  
+ ]
+}

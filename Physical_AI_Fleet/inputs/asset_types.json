@@ -1,0 +1,134 @@
+{
+  "_comment": "Equipment types. usd = the model loaded under /World/Assets/<id>/model (empty = coloured placeholder box of footprint x height): 'Assets/Motor.usd' (= <extension>/Assets/Motor.usd), an absolute path, an omniverse:// URL or a /Isaac/... path. v0.5.1: the model is loaded EXACTLY as authored, then usd_rotate_deg [x, y, z] and usd_scale are applied to it - change them here while trying the model in the simulation (a layout entry may override both). usd_auto_fit true = old automatic units / up-axis fit. gauge = the pressure gauge that is PART of the model: model = a key of gauges.json (needle calibration), needle_prim = the needle's path inside this USD as shown in its Stage panel (the file's default prim name may be included or left out; empty = the first prim named gauges.json needle_name). camera_distance_m optional. A layout entry can set \"gauge\": {\"enabled\": false}. footprint_m = [size along local X, size along local Y] used by the planner. approach.side is in the asset's LOCAL frame (-X, +X, -Y, +Y): the face (with the gauge) the robot camera looks at; it turns with the asset's yaw. readings: what the robot reads; primary = the one checked during inspection and faulted by INJECT FAULT.",
+  "schema_version": "1.0",
+  "types": {
+    "electric_motor": {
+      "label": "Electric motor", "category": "rotating",
+      "usd": "Assets/Motor_with_gauge.usd", "usd_scale": 3, "usd_rotate_deg": [90, 0, 0], "footprint_m": [0.8, 0.5], "height_m": 0.8, "color": [0.2, 0.6, 0.85],
+      "gauge": {"model": "digiten_1p6mpa", "needle_prim": "/Motor/Meshes/Pressure_gauge/Meshes/Sketchfab_model/root/GLTF_SceneRootNode/Needle_3"},
+      "approach": {"side": "-X", "standoff_m": 1.1},
+      "primary": "lube_oil_pressure",
+      "readings": [
+        {"name": "lube_oil_pressure", "label": "Bearing lube oil pressure", "unit": "bar", "min": 0, "max": 10, "normal_low": 2, "normal_high": 6},
+        {"name": "vibration", "label": "Vibration velocity", "unit": "mm/s", "min": 0, "max": 20, "normal_low": 0, "normal_high": 4.5},
+        {"name": "winding_temperature", "label": "Winding temperature", "unit": "degC", "min": 0, "max": 180, "normal_low": 20, "normal_high": 110}
+      ]
+    },
+    "centrifugal_pump": {
+      "label": "Centrifugal pump", "category": "rotating",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [1.6, 0.8], "height_m": 1.0, "color": [0.15, 0.45, 0.8],
+      "approach": {"side": "-Y", "standoff_m": 1.1},
+      "primary": "discharge_pressure",
+      "readings": [
+        {"name": "discharge_pressure", "label": "Discharge pressure", "unit": "bar", "min": 0, "max": 25, "normal_low": 6, "normal_high": 14},
+        {"name": "suction_pressure", "label": "Suction pressure", "unit": "bar", "min": 0, "max": 10, "normal_low": 1, "normal_high": 4},
+        {"name": "bearing_temperature", "label": "Bearing temperature", "unit": "degC", "min": 0, "max": 150, "normal_low": 20, "normal_high": 85}
+      ]
+    },
+    "reciprocating_compressor": {
+      "label": "Reciprocating compressor", "category": "rotating",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [3.0, 1.6], "height_m": 1.8, "color": [0.55, 0.55, 0.6],
+      "approach": {"side": "-Y", "standoff_m": 1.2},
+      "primary": "discharge_pressure",
+      "readings": [
+        {"name": "discharge_pressure", "label": "Discharge pressure", "unit": "bar", "min": 0, "max": 100, "normal_low": 30, "normal_high": 70},
+        {"name": "discharge_temperature", "label": "Discharge temperature", "unit": "degC", "min": 0, "max": 200, "normal_low": 40, "normal_high": 140},
+        {"name": "vibration", "label": "Frame vibration", "unit": "mm/s", "min": 0, "max": 30, "normal_low": 0, "normal_high": 7.1}
+      ]
+    },
+    "gate_valve": {
+      "label": "Gate valve", "category": "valve",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [0.6, 0.4], "height_m": 1.2, "color": [0.85, 0.2, 0.2],
+      "approach": {"side": "-X", "standoff_m": 1.0},
+      "primary": "upstream_pressure",
+      "readings": [
+        {"name": "upstream_pressure", "label": "Upstream pressure", "unit": "bar", "min": 0, "max": 40, "normal_low": 5, "normal_high": 25}
+      ]
+    },
+    "ball_valve": {
+      "label": "Ball valve", "category": "valve",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [0.5, 0.4], "height_m": 0.8, "color": [0.9, 0.35, 0.15],
+      "approach": {"side": "-X", "standoff_m": 1.0},
+      "primary": "upstream_pressure",
+      "readings": [
+        {"name": "upstream_pressure", "label": "Upstream pressure", "unit": "bar", "min": 0, "max": 40, "normal_low": 5, "normal_high": 25}
+      ]
+    },
+    "control_valve": {
+      "label": "Control valve", "category": "valve",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [0.7, 0.5], "height_m": 1.4, "color": [0.95, 0.6, 0.1],
+      "approach": {"side": "-X", "standoff_m": 1.0},
+      "primary": "upstream_pressure",
+      "readings": [
+        {"name": "upstream_pressure", "label": "Upstream pressure", "unit": "bar", "min": 0, "max": 40, "normal_low": 5, "normal_high": 25},
+        {"name": "valve_position", "label": "Valve position", "unit": "%", "min": 0, "max": 100, "normal_low": 20, "normal_high": 80}
+      ]
+    },
+    "pressure_safety_valve": {
+      "label": "Pressure safety valve", "category": "valve",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [0.4, 0.4], "height_m": 1.0, "color": [0.8, 0.1, 0.5],
+      "approach": {"side": "-X", "standoff_m": 1.0},
+      "primary": "inlet_pressure",
+      "readings": [
+        {"name": "inlet_pressure", "label": "Inlet pressure (set 20 bar)", "unit": "bar", "min": 0, "max": 30, "normal_low": 0, "normal_high": 18}
+      ]
+    },
+    "shell_tube_heat_exchanger": {
+      "label": "Shell & tube heat exchanger", "category": "static",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [4.0, 1.0], "height_m": 1.4, "color": [0.6, 0.6, 0.45],
+      "approach": {"side": "-Y", "standoff_m": 1.1},
+      "primary": "outlet_temperature",
+      "readings": [
+        {"name": "outlet_temperature", "label": "Outlet temperature", "unit": "degC", "min": 0, "max": 200, "normal_low": 40, "normal_high": 90},
+        {"name": "shell_pressure", "label": "Shell pressure", "unit": "bar", "min": 0, "max": 20, "normal_low": 2, "normal_high": 10}
+      ]
+    },
+    "three_phase_separator": {
+      "label": "Three-phase separator", "category": "static",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [5.0, 1.6], "height_m": 2.0, "color": [0.4, 0.5, 0.35],
+      "approach": {"side": "-Y", "standoff_m": 1.2},
+      "primary": "vessel_pressure",
+      "readings": [
+        {"name": "vessel_pressure", "label": "Vessel pressure", "unit": "bar", "min": 0, "max": 30, "normal_low": 8, "normal_high": 16},
+        {"name": "liquid_level", "label": "Liquid level", "unit": "%", "min": 0, "max": 100, "normal_low": 30, "normal_high": 70}
+      ]
+    },
+    "pressure_vessel": {
+      "label": "Pressure vessel", "category": "static",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [2.0, 2.0], "height_m": 3.0, "color": [0.7, 0.7, 0.7],
+      "approach": {"side": "-X", "standoff_m": 1.2},
+      "primary": "pressure",
+      "readings": [
+        {"name": "pressure", "label": "Vessel pressure", "unit": "bar", "min": 0, "max": 40, "normal_low": 10, "normal_high": 25}
+      ]
+    },
+    "storage_tank": {
+      "label": "Atmospheric storage tank", "category": "static",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [6.0, 6.0], "height_m": 5.0, "color": [0.85, 0.85, 0.8],
+      "approach": {"side": "-X", "standoff_m": 1.5},
+      "primary": "level",
+      "readings": [
+        {"name": "level", "label": "Product level", "unit": "%", "min": 0, "max": 100, "normal_low": 10, "normal_high": 90}
+      ]
+    },
+    "wellhead_christmas_tree": {
+      "label": "Wellhead / christmas tree", "category": "wellsite",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [1.2, 1.2], "height_m": 2.2, "color": [0.75, 0.15, 0.15],
+      "approach": {"side": "-X", "standoff_m": 1.2},
+      "primary": "tubing_head_pressure",
+      "readings": [
+        {"name": "tubing_head_pressure", "label": "Tubing head pressure", "unit": "bar", "min": 0, "max": 350, "normal_low": 50, "normal_high": 250},
+        {"name": "casing_pressure", "label": "Casing pressure", "unit": "bar", "min": 0, "max": 200, "normal_low": 0, "normal_high": 60}
+      ]
+    },
+    "pig_launcher": {
+      "label": "Pig launcher", "category": "pipeline",
+      "usd": "", "usd_scale": 1.0, "footprint_m": [3.5, 0.8], "height_m": 1.2, "color": [0.35, 0.35, 0.75],
+      "approach": {"side": "-Y", "standoff_m": 1.1},
+      "primary": "barrel_pressure",
+      "readings": [
+        {"name": "barrel_pressure", "label": "Barrel pressure", "unit": "bar", "min": 0, "max": 100, "normal_low": 0, "normal_high": 60}
+      ]
+    }
+  }
+}

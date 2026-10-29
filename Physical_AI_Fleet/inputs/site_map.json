@@ -1,0 +1,18 @@
+{
+  "_comment": "Walkable area = geofence polygon [[x, y], ...] in world metres, corners in order around the edge. Robots plan only inside it and never enter a no-go zone. Converted from cm (/100); zone_1 self-intersection repaired.",
+  "schema_version": "1.0",
+  "walkable_area": {
+    "polygon": [
+      [-25.0, -25.0],
+      [25.0, -25.0],
+      [25.0, 25.0],
+      [-25.0, 25.0]
+    ]
+  },
+  "no_go_zones": [
+    
+  ],
+  "display": {
+    "show": true
+  }
+}

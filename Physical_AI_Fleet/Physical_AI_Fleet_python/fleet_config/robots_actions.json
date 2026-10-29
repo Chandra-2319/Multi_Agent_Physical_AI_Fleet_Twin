@@ -1,0 +1,118 @@
+{
+  "_comment": "Robots, policies and the actions Nemotron may assign. Keys starting with _ are comments.",
+  "schema_version": "1.0",
+
+  "nemotron": {
+    "_comment": "model_id empty = use the model id from the Nemotron Brain panel. snapshot_valid_for_s: a reasoning model can need 10-40 s per decision; the decision is re-checked against the live fleet before it runs, so a long window is safe.",
+    "model_id": "",
+    "structured_output": "json_schema",
+    "temperature": 0.0,
+    "max_tokens": 1200,
+    "corrective_retries": 1,
+    "snapshot_valid_for_s": 90,
+    "triggers": {"on_events": true, "periodic_s": 60, "min_interval_s": 5}
+  },
+
+  "policy": {
+    "confirm_reports_required": 1,
+    "max_unreadable_before_operator": 2,
+    "real_robot_autonomy": "approve_each",
+    "recent_decisions_in_snapshot": 5,
+    "approval_timeout_s": 300,
+    "retry_block_s": 120
+  },
+
+  "schedule": {
+    "_comment": "routine_inspections false: robots only react to alarms and events. true: every asset is also inspected every default_interval_s of RUNNING time (the clock stops while the simulation is paused or stopped). Can be switched in the Run Fleet panel.",
+    "routine_inspections": false,
+    "default_interval_s": 900,
+    "initial_due": false,
+    "per_asset_interval_s": {}
+  },
+
+  "locations": {
+    "_comment": "Set to your scene: pose = [x, y, yaw_rad]",
+    "tool_station": {"label": "Tool box", "pose": [0.0, 0.0, 0.0]}
+  },
+
+  "actions": {
+    "inspect": {
+      "label": "Inspect gauge",
+      "description": "Go to the asset and capture a clear image of its pressure gauge; the VLM checks the reading against the asset's limits. Out of limits starts a repair.",
+      "robot_types": ["quadruped"],
+      "target": {"kind": "asset"},
+      "executor_skill": "read_gauge",
+      "risk": "low",
+      "approval": "none",
+      "real_robot_allowed": true,
+      "return_home_after": true
+    },
+    "reinspect": {
+      "label": "Re-inspect gauge",
+      "description": "Go to the asset again and capture a clear gauge image; the VLM confirms whether the pressure is back within limits. Still out of limits repeats the repair.",
+      "robot_types": ["quadruped"],
+      "target": {"kind": "asset"},
+      "executor_skill": "reinspect_asset",
+      "risk": "low",
+      "approval": "none",
+      "real_robot_allowed": true,
+      "prefer_different_robot": true,
+      "return_home_after": true
+    },
+    "pickup_tool": {
+      "label": "Pick up repair tools",
+      "description": "Go to the tool box, pick up the tool kit and place it on the AMR.",
+      "robot_types": ["humanoid"],
+      "target": {"kind": "location", "id": "tool_station"},
+      "executor_skill": "pick_tool",
+      "risk": "medium",
+      "approval": "operator",
+      "real_robot_allowed": false
+    }
+  },
+
+  "follow_ups": {
+    "amr_tool_delivery": {
+      "_comment": "Automatic, not chosen by Nemotron: after tools are loaded the nearest idle AMR takes them to the asset.",
+      "after": "tools_loaded",
+      "robot_role": "tool_carrier",
+      "executor_skill": "deliver_tools",
+      "approval": "none"
+    }
+  },
+
+  "robot_models": {
+    "go2": {
+      "label": "Unitree Go2", "robot_type": "quadruped",
+      "locomotion": {"_comment": "empty = Isaac Sim default policy", "policy_path": "", "env_yaml_path": ""},
+      "actions": ["inspect", "reinspect"],
+      "real_robot": {"supported": true}
+    },
+    "spot": {
+      "label": "Boston Dynamics Spot", "robot_type": "quadruped",
+      "locomotion": {"policy_path": "", "env_yaml_path": ""},
+      "actions": ["inspect", "reinspect"],
+      "real_robot": {"supported": false}
+    },
+    "h1": {
+      "label": "Unitree H1", "robot_type": "humanoid",
+      "locomotion": {"policy_path": "", "env_yaml_path": ""},
+      "actions": [],
+      "real_robot": {"supported": false}
+    },
+    "g1": {
+      "label": "Unitree G1", "robot_type": "humanoid",
+      "available": false,
+      "unavailable_reason": "pick-up policy in training: set policy_path and env_yaml_path, then available = true",
+      "locomotion": {"policy_path": "", "env_yaml_path": ""},
+      "actions": ["pickup_tool"],
+      "real_robot": {"supported": false}
+    },
+    "amr": {
+      "label": "AMR tool carrier", "robot_type": "amr",
+      "role": "tool_carrier",
+      "actions": [],
+      "real_robot": {"supported": false}
+    }
+  }
+}

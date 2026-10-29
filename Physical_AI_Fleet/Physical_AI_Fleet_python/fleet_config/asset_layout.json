@@ -1,0 +1,9 @@
+{
+  "_comment": "Where each asset stands. type = a key of asset_types.json. position = [x, y] or [x, y, z] in metres; orientation_deg = [roll, pitch, yaw] (or yaw_deg) - only yaw turns the footprint and approach side; scale = number or [sx, sy, sz]. Optional per asset: approach_side, usd (overrides the type), readings {name: {normal_low: .., normal_high: ..}} and primary. Copy to ~/.physical_ai_fleet/asset_layout.json (or set FLEET_ASSET_LAYOUT); SAVE LAYOUT in the Assets panel writes there.",
+  "schema_version": "1.0",
+  "assets": [
+    {"id": "motor-01", "type": "electric_motor", "position": [4.0, 2.0], "orientation_deg": [0, 0, 0]},
+    {"id": "pump-01", "type": "centrifugal_pump", "position": [8.0, -4.0], "orientation_deg": [0, 0, 90]},
+    {"id": "valve-01", "type": "control_valve", "position": [-4.0, 5.0], "orientation_deg": [0, 0, 180]}
+  ]
+}

@@ -1,0 +1,46 @@
+{
+ "_comment": "Floor layout (v0.5.4): where every ASSET and every ROBOT stands. assets: type = a key of asset_types.json; position [x, y] or [x, y, z] m; orientation_deg [roll, pitch, yaw]; optional scale, approach_side, usd, readings, primary. robots: id, model (go2 | spot | h1 | g1 | amr), mode (simulation | digital_twin), position [x, y] = home, yaw_deg = home heading, optional walking (true), connection, map_to_world, policy_path, env_yaml_path. Robots are added when the scene is LOADed and by LOAD FLOOR LAYOUT; ADD / REMOVE ROBOT and ADD / REMOVE ASSET update this file; SAVE FLOOR LAYOUT writes it (previous version kept as .bak).",
+ "schema_version": "1.0",
+ "assets": [
+  {
+   "id": "motor-01",
+   "type": "electric_motor",
+   "position": [
+    4.0,
+    2.0
+   ],
+   "orientation_deg": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "id": "pump-01",
+   "type": "centrifugal_pump",
+   "position": [
+    8.0,
+    -4.0
+   ],
+   "orientation_deg": [
+    0,
+    0,
+    90
+   ]
+  },
+  {
+   "id": "valve-01",
+   "type": "control_valve",
+   "position": [
+    -4.0,
+    5.0
+   ],
+   "orientation_deg": [
+    0,
+    0,
+    180
+   ]
+  }
+ ],
+ "robots": []
+}

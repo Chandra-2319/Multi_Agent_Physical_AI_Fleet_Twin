@@ -1,0 +1,239 @@
+{
+    "version": "1.0",
+    "file_records": [
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/Gas_Refinery_1/0/Blue_baseColor.jpg",
+            "source_hash": "8fb2a7a31d39b7787bba40804cb98291e2b29643",
+            "target_url": "./SubUSDs/textures/Blue_baseColor.jpg",
+            "target_hash": "382d86ebeac1f51caa3c93df3d39dc670adcdf13"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/Gas_Refinery_1/0/Gate_baseColor.jpg",
+            "source_hash": "c861f45560c707ab0ead8006557521205cc0e115",
+            "target_url": "./SubUSDs/textures/Gate_baseColor.jpg",
+            "target_hash": "aa03a5c16cddee35341b49b7a3708a46da9ea4ce"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/Gas_Refinery_1/0/Gate_normal.jpg",
+            "source_hash": "3d6b78d328ea59f2476856a04bcb74cd1adbd83d",
+            "target_url": "./SubUSDs/textures/Gate_normal.jpg",
+            "target_hash": "d0519cafc4216a8d98ae3bfaf9a63693973ead89"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/Gas_Refinery_1/0/UV_Unwrap_baseColor.jpg",
+            "source_hash": "08becb6eae9e896bd1e03146b6de463dbcaa79ec",
+            "target_url": "./SubUSDs/textures/UV_Unwrap_baseColor.jpg",
+            "target_hash": "cd3eb4c4ba12c95e39a2d97ac4ac62edbc587482"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/Gas_Refinery_1/0/UV_Unwrap_metallicRoughness_metal.jpg",
+            "source_hash": "89e8946125baef7c4bc74c4e2338bc1e21585d96",
+            "target_url": "./SubUSDs/textures/UV_Unwrap_metallicRoughness_metal.jpg",
+            "target_hash": "29179b99eb354de33b054e7b51493a14b8a2f64c"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/Gas_Refinery_1/0/UV_Unwrap_metallicRoughness_rough_scale0.jpg",
+            "source_hash": "4f71ddc12c5dc98d4e339b1be8a47247d81718d3",
+            "target_url": "./SubUSDs/textures/UV_Unwrap_metallicRoughness_rough_scale0.jpg",
+            "target_hash": "931795ad9e33b51625c8746b7f10c212e04f45d3"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/Gas_Refinery_2/0/1___Default_baseColor.jpg",
+            "source_hash": "a704d09435814fdbe2686664b573d337dcbbbbcf",
+            "target_url": "./SubUSDs/textures/1___Default_baseColor.jpg",
+            "target_hash": "0e867896b825ef68722d8c1dc8cb64ad1583713a"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/Gas_Refinery_Parts_1/0/23_-_Default_baseColor.jpg",
+            "source_hash": "ee4d93b05a83ab079ca2404b7be3a5c593bcf140",
+            "target_url": "./SubUSDs/textures/23_-_Default_baseColor.jpg",
+            "target_hash": "2c2f13a9fcb8910614c3a5182b8af2265267b589"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/Gas_Refinery_Parts_1/0/Cyan_baseColor.jpg",
+            "source_hash": "9f6beb64c9b3e3c6a3b2d03cb8f232fecbb86bb5",
+            "target_url": "./SubUSDs/textures/Cyan_baseColor.jpg",
+            "target_hash": "0e5c5bf4799934d2464b210f185fef599c5eafb4"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/Gas_Refinery_Parts_1/0/Hand_rail_Mate_baseColor.jpg",
+            "source_hash": "8298edf6dbf168fc97e2ae85d24d963a0ada09e6",
+            "target_url": "./SubUSDs/textures/Hand_rail_Mate_baseColor.jpg",
+            "target_hash": "499566d80841650a0b297e669efedfbfe184067a"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/Gas_Refinery_Parts_1/0/Material_7_baseColor.jpg",
+            "source_hash": "c9a7cc8b0d63199b2ba54a8e779e5cf3b0314032",
+            "target_url": "./SubUSDs/textures/Material_7_baseColor.jpg",
+            "target_hash": "eb86722831481b4b02b8418abfaa7664398b1f52"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/gas_refinery_parts_2/0/Metal2_baseColor.jpg",
+            "source_hash": "b39534d3978392e282c6d36339444ab8d938713d",
+            "target_url": "./SubUSDs/textures/Metal2_baseColor.jpg",
+            "target_hash": "7d0099abc2b6bf26c0103c5d60a0110d9f03883a"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/gas_refinery_parts_2/0/material_0_baseColor.jpg",
+            "source_hash": "1344ace2d7ca6628596a0f3ac67f89bf20019ab0",
+            "target_url": "./SubUSDs/textures/material_0_baseColor.jpg",
+            "target_hash": "57e19364184c307a36776475393dcc8846d5fee5"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/gas_refinery_parts_2/0/oil_refinery_10SG1_emissive.jpg",
+            "source_hash": "6e5118a2059b16c792fc34d65bcf7ffe77e2f366",
+            "target_url": "./SubUSDs/textures/oil_refinery_10SG1_emissive.jpg",
+            "target_hash": "1f4387e194916e6e036697d4c5908c62016810c3"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/gas_refinery_parts_2/0/oil_refinery_10SG1_metallicRoughness_metal.jpg",
+            "source_hash": "88ebc1d43d69b74aec277c3ad0a1a241ee74c395",
+            "target_url": "./SubUSDs/textures/oil_refinery_10SG1_metallicRoughness_metal.jpg",
+            "target_hash": "204ab0208ab84f3cdbd389ad08b15acd186fc24e"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/gas_refinery_parts_2/0/oil_refinery_10SG1_metallicRoughness_rough_scale0.jpg",
+            "source_hash": "6b04e81ab92d8d697d4f97e0964979804676717a",
+            "target_url": "./SubUSDs/textures/oil_refinery_10SG1_metallicRoughness_rough_scale0.jpg",
+            "target_hash": "06c9d9d3dd778506363d54e028a6ffbfe84236a2"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/gas_refinery_parts_2/0/oil_refinery_10SG1_normal.jpg",
+            "source_hash": "274d3aa7ed89e96ae147ed82b5a68893112ddec1",
+            "target_url": "./SubUSDs/textures/oil_refinery_10SG1_normal.jpg",
+            "target_hash": "a8368eb70d75365a83df62dfdfc133a4f918798f"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/old_factory_FREE/0/Material.001_baseColor.jpg",
+            "source_hash": "24c333e2dcbd56bffbce114b33e95dc6baae491f",
+            "target_url": "./SubUSDs/textures/Material.001_baseColor.jpg",
+            "target_hash": "71f0df182ef936a9207c27090a90975657b90dc8"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/old_factory_FREE/0/Material.002_baseColor.jpg",
+            "source_hash": "37ed344e443a2e0996b5f455605e3ff07d0a744d",
+            "target_url": "./SubUSDs/textures/Material.002_baseColor.jpg",
+            "target_hash": "c4c1a40833217df914753889c13e764aa6612266"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/old_factory_FREE/0/Material.003_baseColor.jpg",
+            "source_hash": "5b368d86e739b1f2455278d2db663880d033e5a0",
+            "target_url": "./SubUSDs/textures/Material.003_baseColor.jpg",
+            "target_hash": "865446080dcf365a9f30bbeb47e8304fdc0581ca"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/old_factory_FREE/0/Material.004_baseColor.jpg",
+            "source_hash": "68bf0731c61fde4a56a8863b7f808191491e718f",
+            "target_url": "./SubUSDs/textures/Material.004_baseColor.jpg",
+            "target_hash": "5d6cef609779148fd257a2e6ed8c89dd546774cf"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/old_factory_FREE/0/Material.005_baseColor.jpg",
+            "source_hash": "4002012a4d5d4582c095b2d6b0539cdc34d14268",
+            "target_url": "./SubUSDs/textures/Material.005_baseColor.jpg",
+            "target_hash": "d06f812b5b1feff827a5c204396da6278b0a415b"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/old_factory_FREE/0/Material.006_baseColor.jpg",
+            "source_hash": "2a7f58c13115e6a9acaa1db19e1de0c6b7cae529",
+            "target_url": "./SubUSDs/textures/Material.006_baseColor.jpg",
+            "target_hash": "411d5e6290011580a7b1d8e980cf1375b355a252"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/old_factory_FREE/0/Material.007_baseColor.jpg",
+            "source_hash": "b5e9598ac9c74ffd92f701533976becce4f2299e",
+            "target_url": "./SubUSDs/textures/Material.007_baseColor.jpg",
+            "target_hash": "e6616d9bf807971f6bced82ab0fb5270468c764a"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/old_factory_FREE/0/Material.008_baseColor.jpg",
+            "source_hash": "7a9c85d97e3045ae148fda7915c6f85af9d5bcec",
+            "target_url": "./SubUSDs/textures/Material.008_baseColor.jpg",
+            "target_hash": "8ba06d825dab628242d44c813fd8b43837cda430"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/old_factory_FREE/0/Material.009_baseColor.jpg",
+            "source_hash": "94b5a0f59eb1a59d3f5f5b0a21b33be1f7990b1c",
+            "target_url": "./SubUSDs/textures/Material.009_baseColor.jpg",
+            "target_hash": "5d7eb693aba0036ed91135edcaf8777c5e5812ea"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/old_factory_FREE/0/Material.009_normal.jpg",
+            "source_hash": "51eb88b17dd6802d7bc714a6d607793e2cb10df2",
+            "target_url": "./SubUSDs/textures/Material.009_normal.jpg",
+            "target_hash": "49f810467a1805922d341f1fa9fc45cc2c417131"
+        },
+        {
+            "source_url": "/home/omv/Documents/Prajjwal/old_factory_FREE/0/Material.010_baseColor.jpg",
+            "source_hash": "4a60669676f2b39a1ea65eb576d9bfdb801cefc0",
+            "target_url": "./SubUSDs/textures/Material.010_baseColor.jpg",
+            "target_hash": "4a82c676fb427ca4b7cdf410edb96eca1c7e8db2"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/Concrete_Polished.mdl",
+            "source_hash": "84d09a73384843a311adb945dfe2fc5f50f511c6",
+            "target_url": "./SubUSDs/materials/Concrete_Polished.mdl",
+            "target_hash": "5faaf7b94929d9af2376aae055bcd8bd97757752"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/Concrete_Rough.mdl",
+            "source_hash": "918eacb3c9b5646e4c56df8476240b78702ef3a7",
+            "target_url": "./SubUSDs/materials/Concrete_Rough.mdl",
+            "target_hash": "fd46490c5b6cff1d0b2d02144d065f3829f0ecb9"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/conrete_polished_ORM.jpg",
+            "source_hash": "827f7697d953b88c54a045df4e0fa92042f2e3b7",
+            "target_url": "./SubUSDs/textures/Concrete_Polished/conrete_polished_ORM.jpg",
+            "target_hash": "e246d7ead4c640d0efc7209eec2b6af4d04a32fc"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/conrete_polished_diff.jpg",
+            "source_hash": "a7854291d7804853573821871578a7c5e0e2529f",
+            "target_url": "./SubUSDs/textures/Concrete_Polished/conrete_polished_diff.jpg",
+            "target_hash": "c28de76681cdee9af7cdfb789dc9035f6ef51993"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/conrete_polished_norm.jpg",
+            "source_hash": "a5b470a188d57c23d24046535fe85c5637071afd",
+            "target_url": "./SubUSDs/textures/Concrete_Polished/conrete_polished_norm.jpg",
+            "target_hash": "a3b93f23a00230d937f8baa8db4cc96bc953011e"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/concrete_rough_ORM.jpg",
+            "source_hash": "77e03aa5fcfad3dd9dadcc22c79fd396d11fa439",
+            "target_url": "./SubUSDs/textures/Concrete_Rough/concrete_rough_ORM.jpg",
+            "target_hash": "b360c4f8054bf300a5b7523a7ad2c1123cebd6b5"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/moss_multi_R_rough_G_ao_B_height.jpg",
+            "source_hash": "8b0d8eb6c25f729ac853f3f783686ec3520396db",
+            "target_url": "./SubUSDs/textures/Concrete_Rough/moss_multi_R_rough_G_ao_B_height.jpg",
+            "target_hash": "387907275f06b24d71ebecffc7ac3fc9ae40398b"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/concrete_rough_diff.jpg",
+            "source_hash": "0930d23cff97d80ee8d35e0de2d05cc038560444",
+            "target_url": "./SubUSDs/textures/Concrete_Rough/concrete_rough_diff.jpg",
+            "target_hash": "96fa4aac25bf9003b4858a3e2ba822aad17ab5df"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/moss_diff.jpg",
+            "source_hash": "03ef134d0d35b1aa75cd86cea4c2107e6bf95cee",
+            "target_url": "./SubUSDs/textures/Concrete_Rough/moss_diff.jpg",
+            "target_hash": "0a2eb5787a07d8798c44166c220b7fc6276d15f9"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/concrete_rough_norm.jpg",
+            "source_hash": "ec52dd9f61dee83380c09d120270fc530a9e6b2b",
+            "target_url": "./SubUSDs/textures/Concrete_Rough/concrete_rough_norm.jpg",
+            "target_hash": "23ef828fa718247cc3745066c84b122cf412cd82"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/moss_norm.jpg",
+            "source_hash": "4d8346a85389407288778e8b758e99eda3aff285",
+            "target_url": "./SubUSDs/textures/Concrete_Rough/moss_norm.jpg",
+            "target_hash": "d0fd1abbfcd3d21886d5fe1816cf7981f4760014"
+        }
+    ]
+}

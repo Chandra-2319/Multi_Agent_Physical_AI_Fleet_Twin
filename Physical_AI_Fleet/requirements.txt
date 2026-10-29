@@ -1,0 +1,7 @@
+# Inside Isaac Sim nothing extra is needed.
+# Optional, improves the gauge localizer (Hough circles):
+opencv-python-headless>=4.8
+# Headless runs / tests outside Isaac Sim:
+numpy>=1.24
+pillow>=10.0
+pytest>=7.0

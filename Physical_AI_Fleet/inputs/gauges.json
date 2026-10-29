@@ -1,0 +1,20 @@
+{
+ "_comment": "Pressure gauge MODELS (v0.5.1). The gauge itself is part of the asset USD (asset_types.json \"gauge\"); this file only says how its needle moves and what it shows. needle_name: used when asset_types.json gives no needle_prim (first prim with this name inside the asset). The needle gets an extra op xformOp:rotate<needle_axis>:fleetNeedle, appended after its own ops, so it turns about its own pivot. angle_at_min_deg / angle_at_max_deg: that rotation when the needle points at scale_min / scale_max - CALIBRATE: LOAD, select the needle under /World/Assets/<id>/model/..., change 'Rotate Z:fleetNeedle' until it points at 0, note the value; again for 1.6. normal_value / high_value: what repair-reset and INJECT FAULT (overpressure) show; red_from: where the red arc starts (logs whether the VLM was right). camera_distance_m: how far the robot camera stands from the dial (asset_types.json gauge.camera_distance_m overrides). description: told to the vision model. v0.5.5: high_value 1.55 so the faulty needle points well inside the red band (1.4-1.6), not at its edge.",
+ "schema_version": "1.0",
+ "camera_distance_m": 0.7,
+ "models": {
+  "digiten_1p6mpa": {
+   "needle_name": "Needle_3",
+   "needle_axis": "Z",
+   "scale_min": 0.0,
+   "scale_max": 1.6,
+   "unit": "MPa",
+   "angle_at_min_deg": -98.0,
+   "angle_at_max_deg": -360.0,
+   "red_from": 1.4,
+   "normal_value": 0.6,
+   "high_value": 1.55,
+   "description": "The image shows a round pressure gauge (DIGITEN) with a white dial, a dark grey needle, an inner black scale 0 to 1.6 MPa and an outer red psi scale. A solid red arc marks the high-pressure end of the scale (lower right, about 1.4 to 1.6 MPa). The red numbers around the rim are the psi scale and the red DIGITEN logo is a brand name: neither of them is the danger zone."
+  }
+ }
+}

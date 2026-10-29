@@ -1,0 +1,24 @@
+[package]
+version = "0.5.7"
+category = "Simulation"
+title = "Physical_AI_Fleet"
+description = "Event-driven multi-robot inspection and response. Go2 / Spot quadrupeds and H1 / G1 humanoids walk with RL locomotion policies; AMRs; Simulation or Digital Twin mode; optional environment USD. Cosmos Reason perception, Nemotron on Nebius Token Factory, deterministic safety gate."
+authors = ["Physical AI Hackathon Team"]
+repository = ""
+keywords = ["physical ai", "go2", "spot", "h1", "g1", "amr", "locomotion", "nemotron", "cosmos", "nebius", "digital twin"]
+changelog = "docs/CHANGELOG.md"
+readme = "docs/Overview.md"
+preview_image = "data/preview.png"
+icon = "data/icon.png"
+writeTarget.kit = true
+
+[dependencies]
+"isaacsim.core.api" = {}
+"isaacsim.gui.components" = {}
+"isaacsim.examples.extension" = {}
+"isaacsim.robot.policy.examples" = {}
+"isaacsim.storage.native" = {}
+"omni.kit.uiapp" = {}
+
+[[python.module]]
+name = "Physical_AI_Fleet_python"

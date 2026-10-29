@@ -1,0 +1,32 @@
+{
+ "_comment": "How a robot reads a gauge with the vision model (v0.5.4). WHICH model / URL / key: the AI Models panel (provider profile). Timing (measured with nemotron-3.5-super-vl-120b-a12b, thinking on: 8-15 s per image, rare outliers to ~50 s): call_timeout_s 45 = one call; total_time_s 120 = the whole stay at the asset (up to 1 + max_adjustments calls plus the turns); then the reading is unreadable and the robot is released. max_tokens 8192: thinking used up to ~3800 tokens, a reply cut off at the limit has no answer. crop: the frame is cut to a square of margin x the dial diameter around the gauge and enlarged to output_px before it is sent (the full frame is still saved as evidence; *_crop.jpg is what the model saw); dial_radius_m 0 = estimated from the needle. Answers below confidence_threshold, invalid answers and errors are unreadable - nothing is guessed. low counts as normal. turn_left / turn_right = rotate in place by turn_step_deg (max max_turn_deg); move_back = step back back_step_m (max max_back_m), only if walkable. detect (v0.5.4): before reading, the vision model is asked whether a pressure gauge is in the frame and where (bounding box); the frame is cropped to it. Works without any positions, so the same on a real quadruped. format: how the model is asked to give the box - norm1000 (0-1000, default), norm1 (0-1) or pixels; check which your model follows with tools/test_gauge_bbox.py. thinking false = a quick call (~2-5 s). min_confidence: below it the box is not used. crop.source: order of the box sources - \"vlm\" (from the image) and \"projection\" (from the known gauge position, simulation only); the next one is used when one fails, then the uncropped frame. In the simulation both boxes are logged (gauge_detect iou_with_projection: 1.0 = identical). v0.5.4: thinking is ALWAYS on for both vision queries (set in the code, not here). Each attempt = box call + reading call, both with thinking (~8-15 s each): call_timeout_s and detect.timeout_s 45 each, total_time_s 150 for up to 1 + max_adjustments attempts.",
+ "schema_version": "1.0",
+ "max_tokens": 8192,
+ "temperature": 0.0,
+ "confidence_threshold": 0.75,
+ "total_time_s": 150,
+ "call_timeout_s": 45,
+ "max_adjustments": 3,
+ "turn_step_deg": 10,
+ "max_turn_deg": 30,
+ "back_step_m": 0.15,
+ "max_back_m": 0.45,
+ "move_timeout_s": 12,
+ "settle_s": 0.6,
+ "crop": {
+  "enabled": true,
+  "margin": 1.8,
+  "output_px": 768,
+  "min_px": 96,
+  "dial_radius_m": 0,
+  "source": [
+   "vlm",
+   "projection"
+  ]
+ },
+ "detect": {
+  "format": "norm1000",
+  "timeout_s": 45,
+  "min_confidence": 0.5
+ }
+}
