@@ -1,0 +1,26 @@
+/**:
+    ros__parameters:
+      main_process/init_charging_node_name : 2 #初始化所在充电房名称 
+      main_process/current_floor_index : 0 #初始化所在楼层
+      main_process/current_building_index : 0 #初始化所在楼
+      main_process/z_limit : 0.5 #z轴定位误差容忍度 单位:m
+      main_process/if_visual_all : 0 #可视化是否显示所有点
+      main_process/position_x : 0.963628 #机器人初始化位置x
+      main_process/position_y : 0.00594508 #机器人初始化位置y
+      main_process/position_z : 0.0 #机器人初始化位置z
+      main_process/position_yaw : 0.0 #机器人初始化位置yaw
+      main_process/tunnel_flag : 0 #设置是否有隧道 1:有 0:无
+      #注意current_floor_index参数会被init_charging_node_name所在的充电房楼层覆盖
+      #请把init_charging_node_name改成999即可激活current_floor_index
+      path_process/dog_mode : 0 #遇到障碍物处理 3：重新规划 0：停止 
+      path_process/charging_processing_judgment : 0 #控制到达充点电选择的匹配方式 0:没有匹配直接到达 1:使用二维码 2：使用反光柱
+      path_process/is_door_exist : 0 #控制是否开启门检测 1开0关
+      path_process/is_open_relocation : 0 #控制是否开启充电房重定位 1开0关
+      #机器人循环脚本导航参数
+      pub_goal_charging/nav_mode: 0 #导航模式 0为低电量自动返航，1为电量无关导航
+      pub_goal_charging/low_data: 50 #充电时，低电量阈值
+      pub_goal_charging/high_data: 60 #充电时，高电量阈值
+      pub_goal_charging/charging_node_name: 0 #充电时，充电桩节点名称
+      pub_goal_charging/node_lists: [1.0,2.0,3.0,4.0] #多点循环导航时，目标点名称
+      #检查参数文件
+      check_process/wait_time: 0.0

@@ -1,0 +1,29 @@
+/**:
+  ros__parameters:
+    lidar_type: rslidar32
+    pc_to_image_convert: true
+    pc_to_pixel_convert: true
+    
+    gridMapConvertMapping: false
+    gridMapConvertLocation: false
+    
+    imageChunks: false
+    gridChunks: false
+    singleChunksSize: 101376
+    
+    pc_z_max: 30.0
+    pc_z_min: -10.0
+    
+    image_load_res: 0.05
+    
+    mapping_shell_address: /home
+    relocation_shell_address: /home
+    nav_shell_address: /home
+    rslidar32_lidar_address: /home
+    mid360_lidar_address: /home
+    hesai_lidar_address: /home
+    pcdMap_default_address: /home
+    topoMap_address: /home
+    pcdMap_address: /home
+    taskinfo_address: /home
+    topoMapinfo_address: /home

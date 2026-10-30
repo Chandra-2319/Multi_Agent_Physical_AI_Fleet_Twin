@@ -1,0 +1,7 @@
+#起始点和当前边信息
+graph_msg/Node node
+int8 floor_index
+---
+#返回权重
+float32[] weight
+int8 floor_index_cb

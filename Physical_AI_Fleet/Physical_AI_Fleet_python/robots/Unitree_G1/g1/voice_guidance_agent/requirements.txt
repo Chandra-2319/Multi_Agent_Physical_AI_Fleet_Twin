@@ -1,0 +1,12 @@
+# Workstation (Python 3.10, NVIDIA GPU)
+nemo_toolkit[asr]
+vllm
+fastapi
+uvicorn
+python-multipart
+openai
+soundfile
+ultralytics
+opencv-python-headless<5
+numpy
+requests

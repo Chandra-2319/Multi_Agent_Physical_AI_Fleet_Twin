@@ -1,0 +1,22 @@
+/**:
+    ros__parameters:
+      main_process/init_charging_node_name : 2 #初始化所在充电房名称 
+      main_process/current_floor_index : 3 #初始化所在楼层
+      main_process/current_building_index : 0 #初始化所在楼
+      main_process/z_limit : 0.5 #z轴定位误差容忍度 单位:m
+      main_process/if_visual_all : 0 #可视化是否显示所有点
+      #注意current_floor_index参数会被init_charging_node_name所在的充电房楼层覆盖
+      #请把init_charging_node_name改成999即可激活current_floor_index
+      path_process/dog_mode : 2 #遇到障碍物处理 1：重新规划 2：停止 3：绕开
+      path_process/back_distance : 1.0 #机器狗从电梯出来的倒退距离
+      path_process/charging_back_distance : 1.0 #机器狗从充电点出来的倒退距离
+      
+      pub_goal_charging/server_ip: "127.0.0.1" #服务端ip
+      pub_goal_charging/port: 30000 #服务端端口号
+      pub_goal_charging/waiting_node_name: 3 #等待点节点名称
+
+      pub_goal_charging/nav_mode: 0 #导航模式 0为低电量自动返航，1为电量无关导航
+      pub_goal_charging/low_data: 50 #充电时，低电量阈值
+      pub_goal_charging/high_data: 60 #充电时，高电量阈值
+      pub_goal_charging/charging_node_name: 0 #充电时，充电桩节点名称
+      pub_goal_charging/node_lists: [1.0,2.0,3.0,4.0] #多点循环导航时，目标点名称
