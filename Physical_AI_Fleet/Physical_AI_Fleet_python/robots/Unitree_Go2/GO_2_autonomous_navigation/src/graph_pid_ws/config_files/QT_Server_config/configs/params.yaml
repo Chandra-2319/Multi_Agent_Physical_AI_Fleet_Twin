@@ -1,0 +1,23 @@
+/**:
+  ros__parameters:
+    slam_version: 1.1.2.2
+    #lidar_type: rslidar32
+    pc_to_image_convert: false
+    pc_to_pixel_convert: false
+    #gridMapSwitch: false
+    #gridMapConvertMapping: false
+    #gridMapConvertLocation: false
+    imageChunks: false
+    gridChunks: false
+    singleChunksSize: 101376
+    
+    pc_z_max: 10.5
+    pc_z_min: -10.5
+    image_load_res: 0.05
+    
+    z_limit_flag: false #true/false
+    z_limit_min: -0.5
+    z_limit_max: 1.5
+    robot_type: Go2  #B2/Go2
+    workspace_address: /unitree/module/graph_pid_ws/  #/home/unitree/graph_pid_ws/
+    lidar_ip: 192.168.123.20 #192.168.124.20

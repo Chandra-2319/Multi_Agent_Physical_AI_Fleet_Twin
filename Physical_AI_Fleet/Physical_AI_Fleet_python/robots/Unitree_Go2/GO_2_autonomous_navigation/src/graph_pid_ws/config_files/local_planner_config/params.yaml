@@ -1,0 +1,130 @@
+#根据节点名加载参数
+/**:
+  ros__parameters:
+    open_tocharge_back: true                      # 是否打开回充后退  true : 打开    false :不打开,用dwa后退  需要注意的是：该项为false的时候必须要有激光定位
+
+
+/control_log_node:  # 程序中 类 后面加载的
+  ros__parameters:
+    # log_path log存放文件夹的路径
+    log_path: /unitree/module/graph_pid_ws/record/local_planner/
+
+/LocalPlanner_node:
+  ros__parameters:
+    # csv路径
+    csv_path: /unitree/module/graph_pid_ws/src/graph_process/graph_map/Make_Graph/Make_Path.csv
+    # log路径
+    log_path: /unitree/module/graph_pid_ws/record/local_planner/
+
+    # 话题设置
+    contour_topic: dog_contour                                    # 机器轮廓可视化话题
+    global_path_topic: global_path                                # 路径
+    occ_map_name_topic: local/cost_map                            # 栅格图   global/global_map   local/cost_map 
+    odom_topic: dog_odom                                          # 里程计  提供 速度信息
+    re_odom_topic: lio_sam_ros2/mapping/re_location_odometry     # 激光里程计    /lio_sam_ros2/mapping/re_location_laser_to_map
+    path_all_topic: dwa_marker_array                              # 可视化dwa生成的所有轨迹
+    cmd_topic_name: gaitcmd                                       # 输出控制指令
+
+    # 关于障碍物
+    ObstaclesInsideDis: 1.0                                       # 距离目标 ObstaclesInsideDis 米内只检测内圈障碍物
+    sleep_wait: 600.0                                             # double 障碍物持续阻碍的总时间  单位：s 默认： 2分钟
+
+    # 平滑器
+    smoother_flag: true # 平滑器开关，默认开启
+    smooth_ratio: 0.1   # 0-1 之间
+
+    min_speed: 0.0          # 未启用
+    max_speed: 1.0          # 未启用
+    yaw_speed_max: 0.6      # 启用    旋转速度参数 修改可以加快旋转速度
+
+    speed_level_open: 0.8                                        # 开启 高频步态的阈值  
+
+    open_body_height: false                                      # 是否打开身体高度调整接口
+    body_height_max: 400.0                                       # 身体高度调整阈值 降低或者升高身体高度的阈值 超过则无效 单位 ： mm
+
+    stair_vel_up: 0.08                                           # 爬楼梯速度  上    (AI 弃用)
+    stair_vel_down: 0.12                                         # 爬楼梯速度  下    (AI 弃用)
+    stair_vel_edge: 0.25                                         # 设置爬楼梯定速模式的速度   subtocontrol.edge.dog_stats[0] == 4 才会被激活 (AI 弃用)
+    CurvatureSamplingInterval: 1.0                               # 曲率离散点采样间隔
+
+    # Planner 参数设置
+    Planner/pub_rate: 10.0                                     # 节点发布频率
+    Planner/planner_name: dwa                                  # 控制器选择 dwa pid                             
+
+    Planner/Lfw: 0.8 # 0.6                                     # 搜索的最佳追踪点到当前位置的最远距离
+    Planner/Lfw_stairs: 0.6                                    # 爬楼梯时候  狭窄空间 搜索的最佳追踪点到当前位置的最远距离   (AI 弃用)
+
+    Planner/DogLength: 0.7                                     # 机器长度
+    Planner/DogWidth: 0.4                                      # 机器宽度
+
+    # DWA
+    Planner/max_vel_x: 1.5
+    Planner/max_vel_y: 0.0
+    Planner/max_vel_theta: 1.5
+
+    Planner/min_vel_x: 0.0 # -0.05
+    Planner/min_vel_y: -0.0 # -0.05
+    Planner/min_vel_theta: -1.5
+
+    Planner/acc_lim_x: 5.0 # 1.5  1.0
+    Planner/acc_lim_y: 3.0
+    Planner/acc_lim_theta: 3.0
+
+    Planner/decel_lim_x: -3.0 # -1.5  -1.0
+    Planner/decel_lim_y: -3.0
+    Planner/decel_lim_theta: -3.0
+
+    Planner/linear_granularity: 0.05
+    Planner/angular_granularity: 0.025
+
+    Planner/transform_tolerance: 0.8                           # 是否到达目标附近的容忍度
+    Planner/sim_time: 2.0                                      # 采样总时间   2.0 
+
+    Planner/dt: 0.1                                             # 时间更新间隔
+
+    Planner/goal_radius: 0.3                                    # 可视化目标的半径     用于显示目标点
+
+    use_sim_time: false          
+
+    # 测试能用
+    evalParam_footprint_cost: 0.05                              # 1.障碍物代价的比重
+    evalParam_goal_dist_cost: 5.0                              # 2.目标的距离代价的比重
+    evalParam_path_align_cost: 50.0                             # 3.轨迹的距离代价的比重
+    evalParam_heading: 50.0                                     # 4.目标终点朝向代价的比重
+    evalParam_vel: 0.5                                          # 5.速度比重
+    
+    #  关于姿态调整     此PID参数 后续需要会除以 pub_rate 所以该值可以给大一些   以PID_KP为例，PID_KP = kp *  pub_rate，kp才是输入PID系统的数值
+    # 通用
+    PID_Limmax: 3.0
+    PID_Vmax: 0.15
+    PID_KP: 4.0       # 管廊等地方使用较小参数 2.5 
+    PID_KI: 0.0
+    PID_KD: 1.0
+
+    # x方向
+    PID_x_Limmax: 0.02
+    PID_x_Vmax: 0.3
+    PID_x_KP: 2.0       
+    PID_x_KI: 0.02
+    PID_x_KD: 1.0
+
+    # y方向
+    PID_y_Limmax: 0.02
+    PID_y_Vmax: 0.3
+    PID_y_KP: 1.0       
+    PID_y_KI: 0.02
+    PID_y_KD: 1.0
+
+    # yaw
+    PID_th_Limmax: 0.02
+    PID_th_Vmax: 0.3
+    PID_th_KP: 2.0       
+    PID_th_KI: 0.02
+    PID_th_KD: 1.0
+
+    #  关于 following 过程中 y方向补偿     此PID参数 后续需要会除以 pub_rate 所以该值可以给大一些   以PID_KP为例，PID_KP = kp *  pub_rate，kp才是输入PID系统的数值
+    follow_PID_Limmax: 0.02
+    follow_PID_Vmax: 0.30
+    follow_PID_KP: 2.0       
+    follow_PID_KI: 0.0
+    follow_PID_KD: 1.0

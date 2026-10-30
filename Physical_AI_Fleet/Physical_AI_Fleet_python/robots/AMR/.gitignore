@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Isaac Sim / Omniverse caches and logs
+*.log
+.thumbs/
+*.usd.bak
+*.tmp
+checkpoints/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store

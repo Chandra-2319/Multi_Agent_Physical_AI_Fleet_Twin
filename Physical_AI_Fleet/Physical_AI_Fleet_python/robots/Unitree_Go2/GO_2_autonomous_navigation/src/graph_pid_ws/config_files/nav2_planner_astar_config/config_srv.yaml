@@ -1,0 +1,7 @@
+/**:
+  ros__parameters:
+    path_pub_hz: 1.0
+    odom_topic: "/lio_sam_ros2/mapping/re_location_odometry"
+    path_topic: "global_path"
+    target_topic: "goal_pose"
+    map_topic: "static_layer"

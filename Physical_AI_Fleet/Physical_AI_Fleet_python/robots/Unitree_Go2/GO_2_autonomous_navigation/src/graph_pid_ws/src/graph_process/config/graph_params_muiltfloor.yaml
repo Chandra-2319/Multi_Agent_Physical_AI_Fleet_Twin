@@ -1,0 +1,12 @@
+/**:
+    ros__parameters:
+      main_process/init_charging_node_name : 999 #初始化所在充电房名称 999表示不启用充电房初始化
+      main_process/current_floor_index : 0 #初始化所在楼层
+      main_process/current_building_index : 0 #初始化所在楼
+      main_process/z_limit : 0.5 #z轴定位误差容忍度 单位:m
+      main_process/if_visual_all : 0 #可视化是否显示所有点 0为可视化局部楼层 1为可视化全部楼层
+      #注意current_floor_index参数会被init_charging_node_name所在的充电房楼层覆盖
+      #请把init_charging_node_name改成999即可激活current_floor_index
+      path_process/dog_mode : 2 #遇到障碍物处理 1：重新规划 2：停止 3：绕开
+      path_process/back_distance : 1.0 #机器狗从电梯出来的倒退距离
+      path_process/charging_back_distance : 1.0 #机器狗从充电点出来的倒退距离

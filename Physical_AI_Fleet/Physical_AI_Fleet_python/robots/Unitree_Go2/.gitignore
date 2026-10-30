@@ -1,0 +1,4 @@
+build/ install/ log/ record/ __pycache__/ .idea/ .vscode/ .ipynb_checkpoints/
+*.bak *.log *.bag *.db3 *.so *.so.* *.zip *.tar.gz
+*copy*
+_info/env_snapshot.txt

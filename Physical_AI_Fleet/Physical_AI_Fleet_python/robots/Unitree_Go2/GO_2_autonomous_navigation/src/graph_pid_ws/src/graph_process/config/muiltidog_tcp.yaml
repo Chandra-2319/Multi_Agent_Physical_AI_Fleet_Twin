@@ -1,0 +1,7 @@
+/**:
+    ros__parameters:
+      multidog_client/server_ip: "127.0.0.1"
+      multidog_client/port: 30000
+      multidog_client/dog_id: 0
+
+

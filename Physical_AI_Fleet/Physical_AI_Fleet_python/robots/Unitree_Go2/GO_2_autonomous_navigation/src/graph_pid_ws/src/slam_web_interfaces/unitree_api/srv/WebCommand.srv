@@ -1,0 +1,9 @@
+# 命令内容
+RequestHeader header
+string parameter
+uint8[] binary
+---
+# 执行反馈
+ResponseHeader header
+string data
+uint8[] binary

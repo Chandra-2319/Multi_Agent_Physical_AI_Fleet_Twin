@@ -1,0 +1,13 @@
+[Unit]
+Description=unitree slam service
+After=network.target
+Requires=network.target 
+[Service]
+Type=simple
+User=unitree
+ExecStart=/unitree/module/graph_pid_ws/src/QT_Server/0_QTServer.sh
+PrivateTmp=true
+KillMode=control-group
+
+[Install]
+WantedBy=multi-user.target

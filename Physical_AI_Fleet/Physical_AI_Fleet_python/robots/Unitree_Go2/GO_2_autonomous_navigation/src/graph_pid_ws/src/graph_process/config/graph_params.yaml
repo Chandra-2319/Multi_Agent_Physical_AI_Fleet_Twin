@@ -1,0 +1,9 @@
+/**:
+    ros__parameters:
+      path_process/dog_mode : 2 #遇到障碍物处理 1：重新规划 2：停止 3：绕开
+
+      pub_goal_charging/nav_mode: 0 #导航模式 0为低电量自动返航，1为电量无关导航
+      pub_goal_charging/low_data: 10 #充电时，低电量阈值
+      pub_goal_charging/high_data: 70 #充电时，高电量阈值
+      pub_goal_charging/charging_node_name: 0 #充电时，充电桩节点名称
+      pub_goal_charging/node_lists: [1.0,2.0,3.0,4.0] #多点循环导航时，目标点名称

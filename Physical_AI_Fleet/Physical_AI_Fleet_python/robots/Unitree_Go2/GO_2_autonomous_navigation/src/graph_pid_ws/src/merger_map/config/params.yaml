@@ -1,0 +1,14 @@
+/merger_map_node:
+  ros__parameters:
+    topic_hz: 0.5
+    clear_range: 0.7
+    static_layer_enable: True
+    static_layer_topic_name: /global/global_map
+
+    inflation_layer_enable: True
+    inflation_layer_topic_name: /inflation_layer
+
+    obstacle_layer_enable: False
+    obstacle_layer_topic_name: /inflation_layer_
+
+
